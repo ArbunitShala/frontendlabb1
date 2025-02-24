@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    /* Använder Arial som standardtypsnitt */
+    margin: 0;
+    /* Tar bort standardmarginaler */
+    padding: 0;
+    /* Tar bort standardpadding */
+    background-color: #eeedeb;
+    /* Sätter en ljusgrå bakgrundsfärg */
+    display: flex;
+    /* Använder flexbox för layout */
+    flex-direction: column;
+    /* Lägger elementen i en kolumn */
+    min-height: 100vh;
+    /* Säkerställer att sidan alltid är minst hela skärmhöjden */
+}
+
+/* Stilar för sidhuvudet */
+header {
+    background: #405238;
+    color: white;
+    padding: 15px;
+    /* padding för utrymme */
+    text-align: center;
+    /* Centrerar texten */
+}
+
+/* Navigationsmeny */
+nav ul {
+    list-style: none;
+    /* Tar bort punktlistor */
+    padding: 0;
+    display: flex;
+    /* Använder flexbox för att arrangera länkarna */
+    justify-content: center;
+    /* Centrerar länkarna horisontellt */
+    gap: 20px;
+    /* Lägger till mellanrum mellan länkarna */
+}
+
+/* Stil för navigationsmenyens objekt */
+nav ul li {
+    display: inline;
+    /* Gör listobjekten horisontella */
+}
+
+/* Stil för länkar i navigeringsmenyn */
+nav ul li a {
+    color: white;
+    /* Vit textfärg */
+    text-decoration: none;
+    /* Tar bort understrykning från länkar */
+    font-weight: bold;
+}
+
+/* Huvudinnehållet */
+main {
+    text-align: center;
+    padding: 15px;
+    flex-grow: 1;
+    /* Gör att main expanderar för att trycka ner footern */
+    flex-direction: row;
+}
+/* Layoutcontainer för kolumner */
+.container {
+    display: flex;
+    /* Använder flexbox för att skapa en rad med kolumner */
+    justify-content: space-around;
+    /* Sprider ut kolumnerna jämnt */
+    flex-wrap: wrap;
+    /* Tillåter att de bryts om skärmen är smal */
+    gap: 20px;
+    /* Lägger till mellanrum mellan kolumnerna */
+    padding: 20px;
+    /* Lägger till padding runt hela containern */
+}
+
+/* Bildstilar */
+img {
+    max-width: 400px;
+    /* Begränsar bildens bredd till 400px */
+    height: auto;
+    /* Bevarar bildens proportioner */
+    display: block;
+    /* Gör att bilderna centreras korrekt */
+    margin: 0 auto;
+    /* Centrerar bilden horisontellt */
+    border-radius: 10px;
+    /* Rundar hörnen på bilderna */
+}
+
+/* Sidfot */
+footer {
+    background: #405238;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    /* Centrerar texten */
+    width: 100%;
+    /* Säkerställer att den täcker hela sidbredden */
+    margin-top: auto;
+    /* Ser till att footern stannar längst ner */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Modal är dold från start */
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex; /* Modal visas när man klickar på länken */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Container för två kolumner */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+    background: rgb(252, 251, 251);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid-layout för två kolumner */
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Två lika stora kolumner */
+    gap: 20px;
+    align-items: center;
+}
+
+/* Bild och text-styling */
+.column img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.column p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* design för mobil */
+@media (max-width: 768px) {
+    .columns {
+        grid-template-columns: 1fr; /* Gör om till en kolumn på mindre skärmar */
+        text-align: center;
+    }
+}
