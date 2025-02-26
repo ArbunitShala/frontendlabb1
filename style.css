@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    /* Använder Arial som standardtypsnitt */
+    font-family: 'Roboto';
     margin: 0;
     /* Tar bort standardmarginaler */
     padding: 0;
@@ -75,10 +74,24 @@ main {
     /* Lägger till padding runt hela containern */
 }
 
-/* Bildstilar */
+/* Kolumner */
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    width: 100%;
+}
+
+/* individuell kolumn */
+.column {
+    flex: 1; /* Gör så båda kolumnerna tar lika stor plats */
+    text-align: center;
+}
+
 img {
     max-width: 400px;
-    /* Begränsar bildens bredd till 400px */
     height: auto;
     /* Bevarar bildens proportioner */
     display: block;
@@ -124,35 +137,6 @@ footer {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-}
-
-/* Container för två kolumner */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 15px;
-    background: rgb(252, 251, 251);
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Grid-layout för två kolumner */
-.columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Två lika stora kolumner */
-    gap: 20px;
-    align-items: center;
-}
-
-/* Bild och text-styling */
-.column img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.column p {
-    font-size: 16px;
-    color: #333;
 }
 
 /* design för mobil */
